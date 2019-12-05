@@ -38,7 +38,7 @@ Install from pypi:
 
 .. code-block:: shell
 
-    pip install openwisp-users
+    pip3 install openwisp-users
 
 Install development version
 ---------------------------
@@ -47,13 +47,13 @@ Install tarball:
 
 .. code-block:: shell
 
-    pip install https://github.com/openwisp/openwisp-users/tarball/master
+    pip3 install https://github.com/openwisp/openwisp-users/tarball/master
 
 Alternatively you can install via pip using git:
 
 .. code-block:: shell
 
-    pip install -e git+git://github.com/openwisp/openwisp-users#egg=openwisp_users
+    pip3 install -e git+git://github.com/openwisp/openwisp-users#egg=openwisp_users
 
 If you want to contribute, install your cloned fork:
 
@@ -61,7 +61,7 @@ If you want to contribute, install your cloned fork:
 
     git clone git@github.com:<your_fork>/openwisp-users.git
     cd openwisp-users
-    python setup.py develop
+    python3 setup.py develop
 
 Setup (integrate in an existing django project)
 -----------------------------------------------
@@ -123,21 +123,21 @@ Install your forked repo:
 
     git clone git://github.com/<your_fork>/openwisp-users
     cd openwisp-users/
-    python setup.py develop
+    python3 setup.py develop
 
 Install test requirements:
 
 .. code-block:: shell
 
-    pip install -r requirements-test.txt
+    pip3 install -r requirements-test.txt
 
 Create database:
 
 .. code-block:: shell
 
     cd tests/
-    ./manage.py migrate
-    ./manage.py createsuperuser
+    python3 ./manage.py migrate
+    python3 ./manage.py createsuperuser
 
 Set ``EMAIL_PORT`` in ``settings.py`` to a port number (eg: ``1025``):
 
@@ -149,9 +149,9 @@ Launch development server and SMTP debugging server:
 
 .. code-block:: shell
 
-    ./manage.py runserver
+    python3 ./manage.py runserver
     # open another terminal and run
-    python -m smtpd -n -c DebuggingServer localhost:1025
+    python3 -m smtpd -n -c DebuggingServer localhost:1025
 
 You can access the admin interface at http://127.0.0.1:8000/admin/.
 
@@ -159,7 +159,7 @@ Run tests with:
 
 .. code-block:: shell
 
-    ./runtests.py
+    python3 ./runtests.py
 
 Settings
 --------
